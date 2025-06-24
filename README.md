@@ -1,5 +1,5 @@
 # network-port-scanning
-# Network Port Scanning Task
+# Network Port Scanning & DNS Traffic Analysis
 
 ## Objective
 This repository contains the results of a network port scanning task performed using Nmap and an analysis of DNS traffic using Wireshark.
@@ -16,6 +16,19 @@ This repository contains the results of a network port scanning task performed u
 - A capture of DNS traffic was performed to analyze the queries and responses.
 - The capture file is named `dns_traffic_capture.pcap`.
 
+ ### 📊 Key Observations
+- **Captured DNS Traffic**: Request and response for several domains
+- **Filter Used**: `udp.port == 53`
+- **Source IP**: 192.168.44.128 (Host)
+- **Destination IP**: 192.168.44.2 (DNS server)
+- **Query Highlight**: `www.google.com`
+
+### 📷 Screenshot
+Below is a Wireshark screenshot showing a DNS query made to `www.google.com`:
+
+![DNS Screenshot](wireshark_dns_screenshot.png)
+
+
 ## Security Recommendations
 - Restrict access to the DNS service to trusted IP addresses.
 - Regularly update the DNS software to patch vulnerabilities.
@@ -23,3 +36,9 @@ This repository contains the results of a network port scanning task performed u
 
 ## Conclusion
 This task provided insights into network exposure and highlighted the importance of securing open ports.
+
+### 🛠 Tools Used
+- Kali Linux
+- Wireshark
+- GitHub for hosting files and report
+
